@@ -1,6 +1,7 @@
 # Slide Local API  
 
-This documentation was shared by the manufacturer of Slide, Innovation in Motion, with the intention to help users to continue to use the Slide product in their home automation systems. You can find the original message here: https://innovationinmotion.nl/
+This documentation was shared by the manufacturer of Slide, Innovation in Motion, with the intention to help users to continue to use the Slide product in their home automation systems.  
+You can find the original website here: [https://innovationinmotion.nl/](https://innovationinmotion.nl/)
 
 ## Getting started
 
@@ -8,7 +9,7 @@ The Slide Local API is, in it’s current form, intended as a first version, and
 
 ## Postman
 
-Because this API is not yet published, I am attaching two documents that you can open in Postman (https://www.getpostman.com/), an easy-to-use multi-platform API Management tool. One file contains the collection (e.g. the API calls), the other the environment (which sets, among others, your Slide Device Code).
+Because this API is not yet published, I am attaching two documents that you can open in [Postman](https://www.getpostman.com/), an easy-to-use multi-platform API Management tool. One file contains the collection (e.g. the API calls), the other the environment (which sets, among others, your Slide Device Code).
 
 We kindly request that you do not share these files with other people until we are fully ready to publish the local API documentation online. :-)
 
@@ -37,7 +38,7 @@ Features of the Local API:
 - (Immediate) stop of the motor during a movement (‘Hard abort’)
 - Change WiFi network credentials of Slide
 
-## Known limitations of current Local API spec:
+## Known limitations of current Local API spec
 
 1. When the Local API is enabled, the Cloud API (and therefore, the Slide Mobile App) are not yet available. The Cloud and Local APIs use a different form of authentication. The Slide firmware currently does not handle both HTTP Digest Auth and MQTTS SSL Auth simultaneously. This is a work in progress, but in the meantime we decided to already offer the Local API for those that have a strong preference for non-cloud connectivity.
 2. The Slide Device Name is not yet correctly displayed, which means you will have to bind the Slide device (in the home automation tool of your choice) to a human-readable name by yourself.
