@@ -1,21 +1,21 @@
-# Slide Local API (Beta)
+# Slide Local API  
 
-This documentation was shared by the manufacturer of Slide, Innovation in Motion, with the intention to help users to continue to use the Slide product in their home automation systems. You can find the original message here: 
+This documentation was shared by the manufacturer of Slide, Innovation in Motion, with the intention to help users to continue to use the Slide product in their home automation systems. You can find the original message here: https://innovationinmotion.nl/
 
 ## Getting started
 
-The Slide Local API is, in it’s current form, intended as a first version, and expected to undergo significant expansions in later updates. The focus of the current API is to allow you to directly control the curtains, and we assume you handle all action logic (e.g. triggers) within your home automation tool of choice. 
+The Slide Local API is, in it’s current form, intended as a first version, and expected to undergo significant expansions in later updates. The focus of the current API is to allow you to directly control the curtains, and we assume you handle all action logic (e.g. triggers) within your home automation tool of choice.
 
 ## Postman
 
-Because this API is not yet published, I am attaching two documents that you can open in Postman (https://www.getpostman.com/), an easy-to-use multi-platform API Management tool. One file contains the collection (e.g. the API calls), the other the environment (which sets, among others, your Slide Device Code). 
+Because this API is not yet published, I am attaching two documents that you can open in Postman (https://www.getpostman.com/), an easy-to-use multi-platform API Management tool. One file contains the collection (e.g. the API calls), the other the environment (which sets, among others, your Slide Device Code).
 
 We kindly request that you do not share these files with other people until we are fully ready to publish the local API documentation online. :-)
 
 ## Enabling the Local API
 
 Your Slides are compatible with the Local API, out of the box. By default, this HTTP API is disabled, because system restrictions prevent it from running concurrently with our Cloud API (more on that below).
-In order to enable the local API, we use the reset button (hole) on the bottom of Slide. There are two holes on either side of the power plug hole, the reset button is indicated in the photo below. You will need a small pincer or similar to reach the button inside. 
+In order to enable the local API, we use the reset button (hole) on the bottom of Slide. There are two holes on either side of the power plug hole, the reset button is indicated in the photo below. You will need a small pincer or similar to reach the button inside.
 Briefly press the [reset button](FactoryReset.md) twice, with about 0.5 second between the two presses.
 
 1. If you see the LED (the other hole) rapidly flash five times, you have disabled the Cloud API and enabled the Local API.

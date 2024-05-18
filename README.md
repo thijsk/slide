@@ -8,16 +8,16 @@ This repository documents all the information that I could find about the Innova
 
 ## Documentation
 
-[Local API](Local_api.md)
-[Factory reset](FactoryReset.md)
-[Remove or disassemble](RemoveOrDissassemble.md)
+[Local API](Local_api.md)  
+[Factory reset](FactoryReset.md)  
+[Remove or disassemble](RemoveOrDissassemble.md)  
 
 ## Links
 
 Official support site: (Will be discontinued) [https://support.slide.store/](https://support.slide.store/)  
 Home Assistant integration (installable via HACS): [https://github.com/ualex73/slide](https://github.com/ualex73/slide)  
-Slide Subreddit: [https://www.reddit.com/r/slidecurtains/](https://www.reddit.com/r/slidecurtains/)
-The Slide App has been updated to work without cloud: [https://play.google.com/store/apps/details?id=nl.innovationinmotion.slide](https://play.google.com/store/apps/details?id=nl.innovationinmotion.slide)
+Slide Subreddit: [https://www.reddit.com/r/slidecurtains/](https://www.reddit.com/r/slidecurtains/)  
+The Slide App has been updated to work without cloud: [https://play.google.com/store/apps/details?id=nl.innovationinmotion.slide](https://play.google.com/store/apps/details?id=nl.innovationinmotion.slide)  
 
 ## Thanks
 
