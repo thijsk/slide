@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "83506d9f-335f-4aaa-a582-5949a3bd74b6",
+		"name": "Slide HTTP (Local) API V0.9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Slide.GetInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{slide_ip}}/rpc/Slide.GetInfo",
+					"host": [
+						"{{slide_ip}}"
+					],
+					"path": [
+						"rpc",
+						"Slide.GetInfo"
+					]
+				},
+				"description": "Request basic information from the device. Please note, output of identifiers (device name etc) is incomplete for now. \nWe're working hard to add these data points, in the meantime we recommend you take \"slide_id\" as unique identifier and bind it to a human-readable name on your end.\n\nUse \"pos\" parameter to obtain current curtain position. Output is a floating point between 0 and 1.\n0 is curtain(s) fully open, 1 is curtain(s) fully closed\n\nUse \"touch_go\" parameter to see if T&G is currently enabled or disabled. (The ability to toggle this feature will be added in the next version)."
+			},
+			"response": []
+		},
+		{
+			"name": "Slide.Calibrate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{slide_ip}}/rpc/Slide.Calibrate",
+					"host": [
+						"{{slide_ip}}"
+					],
+					"path": [
+						"rpc",
+						"Slide.Calibrate"
+					]
+				},
+				"description": "(Re)calibrate your curtains.\n\nOverwrites current calibration settings!"
+			},
+			"response": []
+		},
+		{
+			"name": "Slide.SetPos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pos\": 0\n}"
+				},
+				"url": {
+					"raw": "{{slide_ip}}/rpc/Slide.SetPos",
+					"host": [
+						"{{slide_ip}}"
+					],
+					"path": [
+						"rpc",
+						"Slide.SetPos"
+					]
+				},
+				"description": "Request Slide to move your curtain to a certain position.\n\nInput is a floating point between 0 and 1. \n\n0 is curtain(s) fully open, 1 is curtain(s) fully closed"
+			},
+			"response": []
+		},
+		{
+			"name": "Slide.Stop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{slide_ip}}/rpc/Slide.Stop",
+					"host": [
+						"{{slide_ip}}"
+					],
+					"path": [
+						"rpc",
+						"Slide.Stop"
+					]
+				},
+				"description": "This will stop the motor from moving.\n\n(Note: call will also respond with ' success' if the motor is not moving)"
+			},
+			"response": []
+		},
+		{
+			"name": "Slide.Config.WiFi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ssid\": \"YourNewSSID\",\n\t\"pass\":\"YourSuperSecretSSIDPassword\"\n}"
+				},
+				"url": {
+					"raw": "{{slide_ip}}/rpc/Slide.Config.WiFi",
+					"host": [
+						"{{slide_ip}}"
+					],
+					"path": [
+						"rpc",
+						"Slide.Config.WiFi"
+					]
+				},
+				"description": "Allows you to update the WiFi credentials that your Slide connects to."
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "digest",
+		"digest": [
+			{
+				"key": "username",
+				"value": "user",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{slide_device_code}}",
+				"type": "string"
+			},
+			{
+				"key": "realm",
+				"value": "iim",
+				"type": "string"
+			},
+			{
+				"key": "algorithm",
+				"value": "MD5",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b05a27b6-ac23-4d81-be49-0d66a6f2f7dc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "73694967-2029-40fc-a1fc-c8d47b31ac3b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
